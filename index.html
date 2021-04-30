@@ -16,6 +16,9 @@
   <meta name="keywords" content="Michael, Moore, HTML, CSS, JavaScript, Node.js  React, Redux
   Python, SQL, PostgreSQL" />
   <link rel="stylesheet" href="index.css" />
+  <link href="css/smoothness/jquery-ui-1.9.0.custom.css" rel="stylesheet">
+  <script language="javascript" type="text/javascript" src="jquery-1.8.2.js"></script>
+  <script script script src="js/jquery-ui-1.9.0.custom.js"></script>
 </head>
 
 <body>
@@ -44,28 +47,23 @@
         </h1>
         <!-- Put a small paragraph about yourself -->
         <p>A Web Developer based in Atlanta, Georgia.</p>
-        <a href="#contact" class="btn btn--pink">View Resume</a>
+        <a href="#" id='trigger' class="btn btn--pink">View Resume</a>
+        <div id="dialog" style="display:none">
+            <div>
+            <iframe src="./moore-resume.pdf"></iframe>
+            </div>
+        </div> 
         <div>
           <div class="row">
             <!-- Update the links to point to your accounts -->
             <ul class="social-links">
               <li class="social-link-item">
-                <a href="https://twitter.com/nisarhassan12/" title="Link to Twitter Profile">
-                  <img src="./images/twitter.svg" class="social-image" alt="Twitter">
-                </a>
-              </li>
-              <li class="social-link-item">
-                <a href="https://github.com/nisarhassan12/" title="Link to Github Profile">
+                <a href="https://github.com/michaelhmoore/" title="Link to Github Profile">
                   <img src="./images/github.svg" class="social-image" alt="Github">
                 </a>
               </li>
               <li class="social-link-item">
-                <a href="https://codepen.io/nisar_hassan" title="Link to Codepen Profile">
-                  <img src="./images/codepen.svg" class="social-image" alt="Codepen">
-                </a>
-              </li>
-              <li class="social-link-item">
-                <a href=https://www.linkedin.com/in/nisar-hassan-naqvi-413466199/">
+                <a href="https://www.linkedin.com/in/michael-h-moore/">
                   <img src="./images/linkedin.svg" title="Link to Linkedin Profile" class="social-image" alt="Linkedin">
                 </a>
               </li>
@@ -220,7 +218,7 @@
 
           <div class="about__photo-container">
             <!-- Add a nice photo of yourself -->
-            <img class="about__photo" src="./images/syed-ali-hussnain.jpg" alt="" />
+            <img class="about__photo" src="./images/port-img.jpeg" alt="michael moore" />
           </div>
         </div>
       </div>
@@ -234,15 +232,10 @@
       <h2>Get in Touch</h2>
       <div class="contact__info">
         <p>
-          Are you looking for a fast-performing and user-friendly website to
-          represent your product or business? or looking for any kind of
-          consultation? or want to ask questions? or have some advice for me
-          or just want to say "Hi 👋" in any case feel free to Let me know. I
-          will do my best to respond back. 😊 The quickest way to reach out to
-          me is via an email.
+          You can easily reach me at my email if you have any questions
+          or would like to collaborate :)
         </p>
-        <!-- Replace the email with yours -->
-        <a href="mailto:you@example.com" class="btn">you@example.com</a>
+        <a href="mailto:michael.moore@hey.com" class="btn">michael.moore@hey.com</a>
       </div>
     </div>
   </section>
@@ -251,36 +244,18 @@
 
   <footer role="contentinfo" class="footer">
     <div class="row">
-      <!-- Update the links to point to your accounts -->
       <ul class="footer__social-links">
-        <li class="footer__social-link-item">
-          <a href="https://twitter.com/nisarhassan12/" title="Link to Twitter Profile">
-            <img src="./images/twitter.svg" class="footer__social-image" alt="Twitter">
+        <li class="social-link-item">
+          <a href="https://github.com/michaelhmoore/" title="Link to Github Profile">
+            <img src="./images/github.svg" class="social-image" alt="Github">
           </a>
         </li>
-        <li class="footer__social-link-item">
-          <a href="https://github.com/nisarhassan12/" title="Link to Github Profile">
-            <img src="./images/github.svg" class="footer__social-image" alt="Github">
-          </a>
-        </li>
-        <li class="footer__social-link-item">
-          <a href="https://codepen.io/nisar_hassan" title="Link to Codepen Profile">
-            <img src="./images/codepen.svg" class="footer__social-image" alt="Codepen">
-          </a>
-        </li>
-        <li class="footer__social-link-item">
-          <a href=https://www.linkedin.com/in/nisar-hassan-naqvi-413466199/">
-            <img src="./images/linkedin.svg" title="Link to Linkedin Profile" class="footer__social-image" alt="Linkedin">
+        <li class="social-link-item">
+          <a href="https://www.linkedin.com/in/michael-h-moore/">
+            <img src="./images/linkedin.svg" title="Link to Linkedin Profile" class="social-image" alt="Linkedin">
           </a>
         </li>
       </ul>
-
-      <div class="footer__github-buttons">
-        <iframe
-          src="https://ghbtns.com/github-btn.html?user=nisarhassan12&repo=portfolio-template&type=watch&count=true"
-          frameborder="0" scrolling="0" width="170" height="20" title="Watch Portfolio Template on GitHub">
-        </iframe>
-      </div>
     </div>
   </footer>
 
@@ -288,6 +263,14 @@
     <img src="./images/arrow-up.svg" alt="Back to Top" class="back-to-top__image"/>
   </a>
   <script src="./index.js"></script>
+  <script language="javascript" type="text/javascript">
+    $(document).ready(function() {
+      $('#trigger').click(function(){
+        $("#dialog").dialog();
+      }); 
+    });                  
+  </script>
+  
 </body>
 
 </html>
